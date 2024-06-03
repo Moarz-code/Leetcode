@@ -3,9 +3,16 @@ def isPalindrome( x):
         :type x: int
         :rtype: bool
         """
+        if x < 0: 
+            return False 
+        
         inString = str(x)
-        # Compare the string with its reverse
-        return inString == inString[::-1]
+        
+        if inString == inString[::-1]: 
+            return True 
+        else: 
+            return False  
+
     
     
 isPalindrome(121)
