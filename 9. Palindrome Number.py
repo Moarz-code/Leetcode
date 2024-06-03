@@ -6,9 +6,18 @@ def isPalindrome( x):
         inString = str(x)
         
         if len(inString) % 2 != 0: 
-           left=  inString[:(len(inString) -1)/2]
-           right = inString[:-(len(inString) -1)/2]
-           print(right)
-           print(left)
+           num = (len(inString) - 1)//2
+        else:
+           num = len(inString)//2
+        
+        left=  inString[:num]
+        right=  inString[-num:]
+        print(left)
+        print(right)
+        
+        if left == right[::-1]: 
+            return True  
+        else: 
+           return False 
 
 isPalindrome(121)
